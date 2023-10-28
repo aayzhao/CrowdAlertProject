@@ -8,9 +8,12 @@
     <!-- Bootstrap CSS CDN -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- React CDN -->
+    <!-- React and Firebase CDN -->
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+
 </head>
 <body>
 
@@ -35,14 +38,39 @@
         );
     };
 
-    // HomePage component
-    const HomePage = () => {
+   // Body content with post functionality
+   const BodyContent = () => {
+        return React.createElement('div', {className: 'row mt-4'},
+            // Left Section
+            React.createElement('div', {className: 'col-md-8'},
+                React.createElement('h3', null, 'Search: Recent, Top, Controversial, Severe'),
+                React.createElement('div', {className: 'mt-3'},
+                    React.createElement('div', {className: 'card mb-3'},
+                        React.createElement('div', {className: 'card-body'}, 'Active chat 1')
+                    ),
+                    React.createElement('div', {className: 'card mb-3'},
+                        React.createElement('div', {className: 'card-body'}, 'Active chat 2')
+                    )
+                    // More chats can be added here
+                )
+            ),
+            // Right Section
+            React.createElement('div', {className: 'col-md-4'},
+                React.createElement('button', {className: 'btn btn-primary btn-lg btn-block'}, 'Create')
+            )
+        );
+    };
+
+     // HomePage component
+     const HomePage = () => {
         return React.createElement('div', {className: 'container'},
             React.createElement(Header, null),
             React.createElement('h1', {className: 'display-4'}, 'Welcome to the Home Page'),
-            React.createElement('p', {className: 'lead'}, 'This is a simple home page created with React and Bootstrap')
+            React.createElement('p', {className: 'lead'}, 'This is a simple home page created with React and Bootstrap'),
+            React.createElement(BodyContent, null)
         );
     };
+
 
     // Rendering the React component
     ReactDOM.render(
@@ -55,6 +83,6 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
