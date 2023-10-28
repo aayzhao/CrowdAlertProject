@@ -1,0 +1,26 @@
+{
+  "name": "crowdalertproject",
+  "version": "1.0.0",
+  "description": "hackathon2023 project",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aayzhao/CrowdAlertProject.git"
+  },
+  "keywords": [
+    "keywords:",
+    "crowdsourcing",
+    "alert",
+    "safety",
+    "hackathon2023"
+  ],
+  "author": "Isaac Tran Aaron Zhao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aayzhao/CrowdAlertProject/issues"
+  },
+  "homepage": "https://github.com/aayzhao/CrowdAlertProject#readme"
+}
