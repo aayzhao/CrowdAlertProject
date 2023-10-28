@@ -17,13 +17,30 @@
 <div id="root"></div>
 
 <script type="text/javascript">
-    // Creating a functional React component
-    const HomePage = () => {
-        return (
-            React.createElement('div', {className: 'container'},
-                React.createElement('h1', {className: 'display-4'}, 'Welcome to the Home Page'),
-                React.createElement('p', {className: 'lead'}, 'This is a simple home page created with React and Bootstrap')
+    // Header component with Bootstrap Navbar
+    const Header = () => {
+        return React.createElement('nav', {className: 'navbar navbar-expand-lg navbar-light bg-light'},
+            React.createElement('div', {className: 'container-fluid'},
+                React.createElement('div', {className: 'navbar-header'},
+                    React.createElement('button', {className: 'btn btn-outline-success mr-2'}, 'Login'),
+                    React.createElement('button', {className: 'btn btn-outline-danger'}, 'Logout')
+                ),
+                React.createElement('a', {className: 'navbar-brand mx-auto'}, 'Page Name'),
+                React.createElement('ul', {className: 'navbar-nav ml-auto'},
+                    React.createElement('li', {className: 'nav-item'},
+                        React.createElement('a', {className: 'nav-link', href: '#'}, 'Home')
+                    )
+                )
             )
+        );
+    };
+
+    // HomePage component
+    const HomePage = () => {
+        return React.createElement('div', {className: 'container'},
+            React.createElement(Header, null),
+            React.createElement('h1', {className: 'display-4'}, 'Welcome to the Home Page'),
+            React.createElement('p', {className: 'lead'}, 'This is a simple home page created with React and Bootstrap')
         );
     };
 
