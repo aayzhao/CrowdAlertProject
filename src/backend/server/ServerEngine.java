@@ -1,5 +1,6 @@
-package backend;
+package backend.server;
 
+import java.awt.*;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -61,9 +62,11 @@ public class ServerEngine {
                     Scanner input = new Scanner(inputToServer, StandardCharsets.UTF_8);
                     PrintWriter printWriter = new PrintWriter(new OutputStreamWriter(outputFromServer, StandardCharsets.UTF_8), true);
 
-                    printWriter.println("Welcome Minion! I'll multiply the number you give by 10.\n Type -19 to quit");
-                    printWriter.println("I'm Running on Thread: " + Thread.currentThread().getName());
-
+                    // printWriter.println("Welcome Minion! I'll multiply the number you give by 10.\n Type -19 to quit");
+                    printWriter.println("Running on Thread: " + Thread.currentThread().getName());
+                    String url = "src/frontend/home.html";
+                    File htmlFile = new File(url);
+                    Desktop.getDesktop().browse(htmlFile.toURI());
                     boolean done = false;
                     while(!done && input.hasNextLine()) {
                         String line = input.nextLine();
@@ -91,4 +94,6 @@ public class ServerEngine {
             Executors.newCachedThreadPool().execute(runnable);
         }
     }
+
+
 }
