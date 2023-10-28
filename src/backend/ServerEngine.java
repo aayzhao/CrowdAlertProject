@@ -58,8 +58,8 @@ public class ServerEngine {
                     InputStream inputToServer = listenerSocket.getInputStream();
                     OutputStream outputFromServer = listenerSocket.getOutputStream();
 
-                    Scanner input = new Scanner(inputToServer, "UTF-8");
-                    PrintWriter printWriter = new PrintWriter(new OutputStreamWriter(outputFromServer, "UTF-8"), true);
+                    Scanner input = new Scanner(inputToServer, StandardCharsets.UTF_8);
+                    PrintWriter printWriter = new PrintWriter(new OutputStreamWriter(outputFromServer, StandardCharsets.UTF_8), true);
 
                     printWriter.println("Welcome Minion! I'll multiply the number you give by 10.\n Type -19 to quit");
                     printWriter.println("I'm Running on Thread: " + Thread.currentThread().getName());
