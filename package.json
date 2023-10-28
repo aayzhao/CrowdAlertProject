@@ -4,8 +4,10 @@
   "description": "hackathon2023 project",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
-  },
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aayzhao/CrowdAlertProject.git"
@@ -22,5 +24,9 @@
   "bugs": {
     "url": "https://github.com/aayzhao/CrowdAlertProject/issues"
   },
-  "homepage": "https://github.com/aayzhao/CrowdAlertProject#readme"
+  "homepage": "https://github.com/aayzhao/CrowdAlertProject#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
