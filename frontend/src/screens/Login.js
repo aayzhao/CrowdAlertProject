@@ -1,4 +1,4 @@
-import { Box, Tab, Tabs } from "@mui/material";
+import { Box, Tab, Tabs, Typography } from "@mui/material";
 import React from "react";
 import { useSearchParams } from "react-router-dom";
 import AuthContainer from "../components/auth/AuthContainer";
@@ -33,6 +33,10 @@ const Login = (props) => {
 
   return (
     <Center height={90}>
+      <Typography variant="h4" gutterBottom align="center" marginBottom={3}>
+        CrowdAlert
+      </Typography>
+      
       <Box
         display={"flex"}
         alignItems={"center"}
@@ -41,11 +45,13 @@ const Login = (props) => {
         margin={3}
       >
         <Box sx={{ borderBottom: 1, borderColor: "divider", width: "100%" }}>
-          <Tabs value={value} onChange={handleChange} variant="fullWidth">
+          <Tabs value={value} onChange={handleChange} variant="fullWidth"
+                sx={{ "& .MuiTab-root:hover": { transform: "scale(1.05)", transition: "transform 0.2s" } }}>
             <Tab sx={{ px: { lg: 20, xs: 6 } }} label="Login" />
             <Tab sx={{ px: { lg: 16, xs: 6 } }} label="Register" />
           </Tabs>
         </Box>
+        
         {/* login */}
         <TabPanel value={value} index={0}>
           <AuthContainer />
