@@ -5,6 +5,8 @@ const firebaseConfig = {
   databaseURL: "https://crowdalertproject-default-rtdb.firebaseio.com",
 };
 
+// https://firebase.google.com/docs/database/web/start
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
